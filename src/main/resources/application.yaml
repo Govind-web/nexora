@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: nexora
+    description: this application clone of lovable
+
+
+    spring:
+      datasource:
+        url: jdbc:postgresql://localhost:5432/myapp
+        username: postgres
+        password: admin123
+
+      jpa:
+        hibernate:
+          ddl-auto: update
+        show-sql: true
+
+
