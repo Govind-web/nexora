@@ -30,7 +30,7 @@ public class ProjectController {
 
     @PostMapping
     public ResponseEntity<ProjectResponse> crateProject(@RequestBody ProjectRequest request){
-        Long userId=1L;
+        Long userId=3L;
         return ResponseEntity.status(HttpStatus.CREATED).body(projectService.createProject(request,userId));
     }
     @PatchMapping("/{id}")

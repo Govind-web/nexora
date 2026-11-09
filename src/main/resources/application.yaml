@@ -1,18 +1,19 @@
 spring:
   application:
     name: nexora
-    description: this application clone of lovable
 
+  datasource:
+    url: jdbc:postgresql://localhost:5432/myapp
+    username: postgres
+    password: admin123
+    driver-class-name: org.postgresql.Driver
 
-    spring:
-      datasource:
-        url: jdbc:postgresql://localhost:5432/myapp
-        username: postgres
-        password: admin123
-
-      jpa:
-        hibernate:
-          ddl-auto: update
-        show-sql: true
-
-
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          time_zone: Asia/Kolkata
